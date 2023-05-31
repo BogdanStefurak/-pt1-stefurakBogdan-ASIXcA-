@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="toggleTheme" onclick="toggleTheme()">
+        <span class="icon-sun">&#9728;</span>
+        <span class="icon-moon">&#127769;</span>
+    </button>
+    
+<a href="../Ruleta_Noms/index1.html">La Ruleta</a>
+
+    <div id="wrapper">
+
+        <h1>00:00:00</h1>
+
+        <form class="setAlarm">
+            <div class="set-alarm-field">
+                <input type="number" name="hr" placeholder="HH" max="23" min="00">
+                <input type="number" name="min" placeholder="MM" max="59" min="00">
+                <input type="number" name="sec" placeholder="SS" max="59" min="00">
+            </div>
+            <div class="buttons">
+                <button type="submit" class="set-alarm">Introducir alarma</button>
+                <button type="reset" onclick="stopAlarm()" class="clear-alarm">Parar alarma</button>
+            </div>
+        </form>
+
+        <hr style="margin-top: 20px">
+
+        <h3 style="margin: 20px 0;">Alarmas pendientes</h3>
+        <div id="upcoming-alarms">
+            <ul id="upcoming-alarms-list">
+            </ul>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
